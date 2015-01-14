@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<form-beans>
+
+		<form-bean name="addNewCustomerForm" type="com.hzs.struts.form.AddNewCustomerForm" />
+		<form-bean name="deleteCustomerForm" type="com.hzs.struts.form.DeleteCustomerForm" />
+		
+
+		<form-bean name="userLoginForm" type="com.hzs.struts.form.UserLoginForm" />
+
+		<form-bean name="studentWebForm" type="com.hzs.struts.form.StudentWebForm" />
+		<form-bean name="stuModifyInfoForm" type="com.hzs.struts.form.StuModifyInfoForm" />
+
+		<form-bean name="teacherWebForm" type="com.hzs.struts.form.TeacherWebForm" />
+		<form-bean name="teaModifyInfoForm" type="com.hzs.struts.form.TeaModifyInfoForm" />
+
+		<form-bean name="manAddTimetableForm" type="com.hzs.struts.form.ManAddTimetableForm" />
+
+		<form-bean name="managerWebForm" type="com.hzs.struts.form.ManagerWebForm" />
+		<form-bean name="manModDelTimetableForm" type="com.hzs.struts.form.ManModDelTimetableForm" />
+		<form-bean name="modTimetableForm" type="com.hzs.struts.form.ModTimetableForm" />
+		<form-bean name="modifyPwdForm" type="com.hzs.struts.form.ModifyPwdForm" />
+	</form-beans>
+
+	<global-forwards>
+		<forward name="manAddTimetable" path="/form/manAddTimetable.jsp"></forward>
+		<forward name="manModDelTimetable" path="/form/manModDelTimetable.jsp"></forward>
+		<forward name="modifyPwd" path="/form/modifyPwd.jsp"></forward>
+	</global-forwards>
+
+
+
+
+	
+
+	<action-mappings>
+	
+	<!-- added by jiao , add new mapping -->
+		<action attribute="addNewCustomerForm" input="/form/addNewCustomer.jsp"
+			name="addNewCustomerForm" path="/addNewCustomer" scope="request"
+			type="com.hzs.struts.action.AddNewCustomerAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="addNewCustomer" path="/form/addNewCustomer.jsp" />
+			<forward name="teacherWeb" path="/form/teacherWeb.jsp" />
+			<forward name="managerWeb" path="/form/managerWeb.jsp" />
+			<forward name="failure" path="/form/userLogin.jsp" />
+		</action>
+		
+		<action attribute="deleteCustomerForm" input="/form/deleteCustomer.jsp"
+			name="deleteCustomerForm" path="/deleteCustomer" scope="request"
+			type="com.hzs.struts.action.DeleteCustomerAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="deleteCustomer" path="/form/deleteCustomerForm.jsp" />
+			<forward name="failure" path="/form/userLogin.jsp" />
+			<forward name="delSuccess" path="/form/delSuccess.jsp" />
+		</action>
+		
+
+		<action attribute="studentWebForm" input="/form/studentWeb.jsp"
+			name="studentWebForm" path="/studentWeb" scope="request"
+			type="com.hzs.struts.action.StudentWebAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="stuBasicInfo" path="/form/stuBasicInfo.jsp" />
+			<forward name="stuModifyInfo" path="/form/stuModifyInfo.jsp" />
+			<forward name="stuTimetable" path="/form/stuTimetable.jsp" />
+		</action>
+
+		<action attribute="teacherWebForm" input="/form/teacherWeb.jsp"
+			name="teacherWebForm" path="/teacherWeb" scope="request"
+			type="com.hzs.struts.action.TeacherWebAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="teaBasicInfo" path="/form/teaBasicInfo.jsp" />
+			<forward name="teaModifyInfo" path="/form/teaModifyInfo.jsp" />
+			<forward name="teaTimetable" path="/form/teaTimetable.jsp" />
+		</action>
+
+		<action attribute="stuModifyInfoForm" input="/form/stuModifyInfo.jsp"
+			name="stuModifyInfoForm" path="/stuModifyInfo" scope="request"
+			type="com.hzs.struts.action.StuModifyInfoAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="studentWeb" path="/form/studentWeb.jsp" />
+		</action>
+
+		<action attribute="teaModifyInfoForm" input="/form/teaModifyInfo.jsp"
+			name="teaModifyInfoForm" path="/teaModifyInfo" scope="request"
+			type="com.hzs.struts.action.TeaModifyInfoAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="teacherWeb" path="/form/teacherWeb.jsp" />
+		</action>
+
+		<action attribute="managerWebForm" input="/form/managerWeb.jsp"
+			name="managerWebForm" path="/managerWeb" scope="request"
+			type="com.hzs.struts.action.ManagerWebAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="manTimetable" path="/form/manTimetable.jsp" />
+		</action>
+
+		<action attribute="manAddTimetableForm" input="/form/manAddTimetable.jsp"
+			name="manAddTimetableForm" path="/manAddTimetable" scope="request"
+			type="com.hzs.struts.action.ManAddTimetableAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="managerWeb" path="/form/managerWeb.jsp" />
+		</action>
+
+		<action attribute="manModDelTimetableForm" input="/form/manModDelTimetable.jsp"
+			name="manModDelTimetableForm" path="/manModDelTimetable" scope="request"
+			type="com.hzs.struts.action.ManModDelTimetableAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="modTimetable" path="/form/modTimetable.jsp" />
+			<forward name="delSuccess" path="/form/delSuccess.jsp" />
+		</action>
+
+		<action attribute="modTimetableForm" input="/form/modTimetable.jsp"
+			name="modTimetableForm" path="/modTimetable" scope="request"
+			type="com.hzs.struts.action.ModTimetableAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="manModDelTimetable" path="/form/manModDelTimetable.jsp" />
+		</action>
+
+		<action attribute="modifyPwdForm" input="/form/modifyPwd.jsp"
+			name="modifyPwdForm" path="/modifyPwd" scope="request"
+			type="com.hzs.struts.action.ModifyPwdAction" validate="false">
+			<set-property property="cancellable" value="false" />
+			<forward name="userLogin" path="/form/userLogin.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<message-resources parameter="com.hzs.struts.ApplicationResources" />
+
+</struts-config>
+

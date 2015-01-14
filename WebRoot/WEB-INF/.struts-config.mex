@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/userLogin.do" location="15,135" dimension="260,104" />
+  <StrutsActivity path="/studentWeb.do" location="720,90" dimension="272,104" />
+  <StrutsActivity path="/teacherWeb.do" location="195,600" dimension="274,104" />
+  <StrutsActivity path="/stuModifyInfo.do" location="1250,50" dimension="283,104" />
+  <StrutsActivity path="/teaModifyInfo.do" location="-285,465" dimension="272,104" />
+  <StrutsActivity path="/managerWeb.do" location="650,850" dimension="308,104" />
+  <StrutsActivity path="/manAddTimetable.do" location="1350,375" dimension="308,104" />
+  <StrutsActivity path="/manModDelTimetable.do" location="885,555" dimension="331,104" />
+  <StrutsActivity path="/modTimetable.do" location="650,1050" dimension="286,104" />
+  <StrutsActivity path="/modifyPwd.do" location="650,1250" dimension="266,104" />
+  <StrutsActivity path="manAddTimetable;6" location="750,390" dimension="207,87" />
+  <StrutsActivity path="manModDelTimetable;6" location="480,390" dimension="230,87" />
+  <StrutsActivity path="modifyPwd;6" location="350,1150" dimension="165,87" />
+  <StrutsActivity path="/form/userLogin.jsp" location="30,0" dimension="147,53" />
+  <StrutsActivity path="/form/teacherWeb.jsp" location="15,315" dimension="160,53" />
+  <StrutsActivity path="/form/managerWeb.jsp" location="50,950" dimension="169,53" />
+  <StrutsActivity path="/form/studentWeb.jsp" location="465,135" dimension="160,53" />
+  <StrutsActivity path="/form/stuModifyInfo.jsp" location="840,300" dimension="171,53" />
+  <StrutsActivity path="/form/stuTimetable.jsp" location="795,-15" dimension="164,53" />
+  <StrutsActivity path="/form/stuBasicInfo.jsp" location="660,300" dimension="160,53" />
+  <StrutsActivity path="/form/teaBasicInfo.jsp" location="120,765" dimension="161,53" />
+  <StrutsActivity path="/form/teaTimetable.jsp" location="300,765" dimension="165,53" />
+  <StrutsActivity path="/form/teaModifyInfo.jsp" location="-225,645" dimension="172,53" />
+  <StrutsActivity path="/form/manTimetable.jsp" location="350,950" dimension="172,53" />
+  <StrutsActivity path="/form/manAddTimetable.jsp" location="1050,405" dimension="196,53" />
+  <StrutsActivity path="/form/delSuccess.jsp" location="1250,950" dimension="153,53" />
+  <StrutsActivity path="/form/modTimetable.jsp" location="50,1150" dimension="174,53" />
+  <StrutsActivity path="/form/manModDelTimetable.jsp" location="540,585" dimension="219,53" />
+  <StrutsActivity path="/form/modifyPwd.jsp" location="1250,1150" dimension="154,53" />
+  <StrutsActivity path="/form/delTimetable.jsp" location="1250,750" dimension="165,53" />
+  <StrutsTransition id="/manModDelTimetable.do,delSuccess,/form/delSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1080,659" />
+      <AbsolutePoint location="1080,976" />
+      <AbsolutePoint location="1250,976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modTimetable.do,manModDelTimetable,/form/manModDelTimetable.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="793,1102" />
+      <AbsolutePoint location="649,611" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentWeb.do,stuBasicInfo,/form/stuBasicInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="740,194" />
+      <AbsolutePoint location="740,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stuModifyInfo.do,studentWeb,/form/studentWeb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="545,161" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/stuModifyInfo.jsp,null,/stuModifyInfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="925,326" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyPwd.do,userLogin,/form/userLogin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="783,1302" />
+      <AbsolutePoint location="103,26" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/userLogin.jsp,null,/userLogin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="145,53" />
+      <AbsolutePoint location="145,135" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentWeb.do,stuModifyInfo,/form/stuModifyInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="925,194" />
+      <AbsolutePoint location="925,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacherWeb.do,teaTimetable,/form/teaTimetable.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="382,704" />
+      <AbsolutePoint location="382,765" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userLogin.do,managerWeb,/form/managerWeb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="15,187" />
+      <AbsolutePoint location="-360,187" />
+      <AbsolutePoint location="-360,976" />
+      <AbsolutePoint location="50,976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userLogin.do,teacherWeb,/form/teacherWeb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="95,239" />
+      <AbsolutePoint location="95,315" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaModifyInfo.do,teacherWeb,/form/teacherWeb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-149,465" />
+      <AbsolutePoint location="-149,341" />
+      <AbsolutePoint location="15,341" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/modTimetable.jsp,null,/modTimetable.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="137,1150" />
+      <AbsolutePoint location="137,1102" />
+      <AbsolutePoint location="650,1102" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="manModDelTimetable;6,null,/form/manModDelTimetable.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="649,477" />
+      <AbsolutePoint location="649,585" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/studentWeb.jsp,null,/studentWeb.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="625,161" />
+      <AbsolutePoint location="720,161" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userLogin.do,failure,/form/userLogin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="103,135" />
+      <AbsolutePoint location="103,53" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/managerWeb.do,manTimetable,/form/manTimetable.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,932" />
+      <AbsolutePoint location="436,932" />
+      <AbsolutePoint location="436,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/modifyPwd.jsp,null,/modifyPwd.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1327,1203" />
+      <AbsolutePoint location="1327,1302" />
+      <AbsolutePoint location="916,1302" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userLogin.do,studentWeb,/form/studentWeb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="275,161" />
+      <AbsolutePoint location="465,161" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manModDelTimetable.do,modTimetable,/form/modTimetable.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1050,659" />
+      <AbsolutePoint location="1050,1018" />
+      <AbsolutePoint location="107,1018" />
+      <AbsolutePoint location="107,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentWeb.do,stuTimetable,/form/stuTimetable.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="877,90" />
+      <AbsolutePoint location="877,38" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="manAddTimetable;6,null,/form/manAddTimetable.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="957,431" />
+      <AbsolutePoint location="1050,431" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacherWeb.do,teaBasicInfo,/form/teaBasicInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="210,704" />
+      <AbsolutePoint location="210,765" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/teaModifyInfo.jsp,null,/teaModifyInfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-149,645" />
+      <AbsolutePoint location="-149,569" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/managerWeb.jsp,null,/managerWeb.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="135,950" />
+      <AbsolutePoint location="135,902" />
+      <AbsolutePoint location="650,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manAddTimetable.do,managerWeb,/form/managerWeb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1504,427" />
+      <AbsolutePoint location="134,976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/manAddTimetable.jsp,null,/manAddTimetable.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1246,427" />
+      <AbsolutePoint location="1350,427" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/manModDelTimetable.jsp,null,/manModDelTimetable.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="759,607" />
+      <AbsolutePoint location="885,607" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacherWeb.do,teaModifyInfo,/form/teaModifyInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="195,671" />
+      <AbsolutePoint location="-53,671" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="modifyPwd;6,null,/form/modifyPwd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="515,1176" />
+      <AbsolutePoint location="1250,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/teacherWeb.jsp,null,/teacherWeb.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="175,338" />
+      <AbsolutePoint location="332,338" />
+      <AbsolutePoint location="332,600" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

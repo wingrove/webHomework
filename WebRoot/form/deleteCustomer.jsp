@@ -14,7 +14,7 @@
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<!-- 	<h1><p class="text-center">add new customer</p></h1> -->
-	<h1>delete  customer</h1>
+	<h1>delete Customer</h1>
 
 	<hr>
 	<br>
